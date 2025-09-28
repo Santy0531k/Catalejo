@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Catalejo - Video</title>
+  <link rel="stylesheet" href="css/quienes.css">
+  <style>
+    /* Extra para centrar el video */
+    .video-container {
+      display: flex;
+      justify-content: center;
+      margin: 30px 0;
+    }
+    .video-container iframe {
+      width: 100%;
+      max-width: 800px;
+      aspect-ratio: 16 / 9;
+      border-radius: 12px;
+      border: none;
+    }
+        /* Extra para centrar el "reproductor" */
+    .video-container {
+      display: flex;
+      justify-content: center;
+      margin: 30px 0;
+    }
+    .video-container img {
+      width: 100%;
+      max-width: 800px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .video-container img:hover {
+      transform: scale(1.02);
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand">
+        <a href="index.html">
+          <img src="img/inicio_1.png" alt="Catalejo" class="brand-logo">
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Título -->
+  <section class="blog-section">
+    <h2 class="blog-heading">
+      <a href="blog.html">
+        <!-- Aquí cambias la imagen por la que quieras -->
+        <img src="img/adaptaciones.png" alt="Ícono Video">
+      </a>
+    </h2>
+  </section>
+
+  <!-- Contenido (imagen como reproductor) -->
+  <section class="contenido-blog">
+    <div class="video-container">
+      <a href="https://youtu.be/502-LVAnV_0" target="_blank">
+        <!-- Usa aquí la miniatura o una imagen estilo reproductor -->
+        <img src="img/Adaptaciones-video.png" alt="Reproductor Catalejo">
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="mini-footer">
+    <div class="enlaces-footer">
+      <a href="quienes.html" class="btn-footer azul">Quiénes somos</a>
+      <a href="blog.html" class="btn-footer verde">Blog</a>
+      <a href="adaptaciones.html" class="btn-footer morado">Adaptaciones</a>
+      <a href="podcast.html" class="btn-footer amarillo">Podcast</a>
+    </div>
+  </footer>
+</body>
+</html>

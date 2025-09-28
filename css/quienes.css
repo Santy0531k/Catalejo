@@ -1,0 +1,94 @@
+/* General */
+body {
+  margin: 40px auto;
+  font-family: 'Segoe UI', Calibri, sans-serif;
+  background: #ffffff;
+  line-height: 1.6;
+  max-width: 900px;
+}
+
+/* Encabezado */
+.site-header {
+  background: linear-gradient(180deg,#eaf7fb 0%, #ffffff 60%);
+  padding: 28px 0;
+  border-bottom: 3px solid #f1c02f;
+}
+.wrap {
+  width: min(1180px, 94%);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.brand-logo {
+  height: 64px;
+  display: block;
+}
+
+/* Sección principal */
+.blog-heading {
+  margin: 20px 0 40px;
+  text-align: 10px;
+}
+.blog-heading img {
+  max-width: 500px;
+}
+
+/* Imágenes con texto alrededor */
+.img-left {
+  float: left;
+  width: 260px;
+  margin: 0 20px 10px 0;
+  border-radius: 8px;
+  shape-outside: inset(0 round 8px);
+  -webkit-shape-outside: inset(0 round 8px);
+}
+
+.img-right {
+  float: right;
+  width: 260px;
+  margin: 0 0 10px 20px;
+  border-radius: 8px;
+  shape-outside: inset(0 round 8px);
+  -webkit-shape-outside: inset(0 round 8px);
+}
+
+/* Texto */
+.contenido-blog p {
+  text-align: justify;
+  margin-bottom: 18px;
+  font-size: 1.05rem;
+}
+
+/* Footer */
+.mini-footer {
+  text-align: center;
+  padding: 15px;
+  background: #ffffff;
+  border-top: 1px solid #f0f0f0;
+  margin-top: 40px;
+}
+.enlaces-footer {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.btn-footer {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 20px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  transition: transform 0.2s, background 0.2s;
+}
+.btn-footer:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+.btn-footer.azul { background: #42a5f5; }
+.btn-footer.verde { background: #66bb6a; }
+.btn-footer.morado { background: #8e24aa; }
+.btn-footer.amarillo { background: #fbc02d; color: #000; }

@@ -1,0 +1,121 @@
+/* General */
+body {
+  margin: 40px auto;
+  font-family: 'Segoe UI', Calibri, sans-serif;
+  background: #ffffff;
+  line-height: 1.6;
+  max-width: 900px;
+  text-align: center;
+}
+
+/* Header */
+.site-header {
+  background: linear-gradient(180deg,#eaf7fb 0%, #ffffff 60%);
+  padding: 28px 0;
+  border-bottom: 3px solid #f1c02f;
+}
+.wrap {
+  width: min(1180px, 94%);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+.brand-logo {
+  height: 64px;
+  display: block;
+}
+
+/* Sección principal */
+.blog-heading {
+  margin: 20px 0 40px;
+}
+.blog-heading img {
+  max-width: 450px;
+}
+
+/* Contenido */
+.coming-soon {
+  margin: 60px auto;
+}
+.coming-soon h3 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+.coming-soon p {
+  font-size: 1.2rem;
+  color: #777;
+}
+
+/* Footer */
+.mini-footer {
+  text-align: center;
+  padding: 15px;
+  background: #ffffff;
+  border-top: 1px solid #f0f0f0;
+  margin-top: 40px;
+}
+.enlaces-footer {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.btn-footer {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 20px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  transition: transform 0.2s, background 0.2s;
+}
+.btn-footer:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+.btn-footer.azul { background: #42a5f5; }
+.btn-footer.verde { background: #66bb6a; }
+.btn-footer.morado { background: #8e24aa; }
+.btn-footer.amarillo { background: #fbc02d; color: #000; }
+
+/* Contenedor dinámico */
+.coming-soon-dynamic {
+  text-align: center;
+  padding: 80px 30px;
+  margin: 60px auto;
+  border-radius: 20px;
+  background: linear-gradient(270deg, #42a5f5, #66bb6a, #8e24aa);
+  background-size: 600% 600%;
+  animation: gradientMove 10s ease infinite;
+  color: #fff;
+  max-width: 700px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Animación del degradado */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Texto */
+.coming-soon-dynamic h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  animation: pulse 2s infinite;
+}
+
+.coming-soon-dynamic p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Efecto de latido en el título */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}

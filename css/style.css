@@ -1,0 +1,319 @@
+/* RESET */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; background: #fff; color: #222; }
+
+/* HEADER */
+/* --- Header estilo Catalejo --- */
+.site-header {
+  background: linear-gradient(180deg,#eaf7fb 0%, #ffffff 60%);
+  padding: 28px 0;
+  position: relative;
+  z-index: 10;
+  border-bottom: 3px solid #f1c02f;
+}
+.wrap {
+  width: min(1180px, 94%);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.brand { display: flex; align-items: center; gap: 12px; }
+.brand-logo { height: 64px; display: block; }
+
+/* Píldoras / botones */
+.nav-pills { margin-left: auto; display: flex; gap: 12px; align-items: center; }
+.pill {
+  padding: 8px 18px; min-width: 130px; text-align: center;
+  border-radius: 24px; font-weight: 700; font-size: 15px; line-height: 1.2;
+  text-decoration: none; color: #fff; box-shadow: 0 7px 15px rgba(0,0,0,0.12);
+  transition: transform .12s ease, box-shadow .12s ease; display: inline-block;
+}
+.pill:hover { transform: translateY(-3px); }
+.pill.quienes { background: #4fb3f0; }
+.pill.blog    { background: #58b349; }
+.pill.adap    { background: #7b4cc9; }
+.pill.pod     { background: #f1c02f; color:#222; }
+
+/* socials */
+.socials { display:flex; gap:10px; margin-left: 12px; }
+.soc {
+  width: 40px; height: 40px; border-radius: 50%; background: #fff;
+  display: grid; place-items: center; color: #111; text-decoration: none;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12); font-size: 16px;
+}
+
+/* responsive header */
+/* Botón hamburguesa */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+  color: #222;
+}
+
+/* Vista móvil */
+@media (max-width: 900px) {
+  .menu-toggle { 
+    display: block; 
+  }
+
+  .nav-pills {
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    background: #fff;
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    z-index: 99;
+  }
+
+  .nav-pills.active { 
+    display: flex; 
+  }
+
+  .pill {
+    color: #222 !important;
+    background: #f1f1f1;
+    box-shadow: none;
+  }
+
+  .pill:hover {
+    background: #ddd;
+    transform: none;
+  }
+}
+
+
+/* ========================= */
+/* CAROUSEL (nuevo, sin bootstrap) */
+/* ========================= */
+
+.my-carousel {
+  max-width: 1100px;
+  margin: 36px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  background: #000;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.18);
+}
+
+/* viewport que contiene slides */
+.carousel-viewport {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+/* contenedor de slides */
+.slides {
+  display: flex;
+  transition: transform 600ms cubic-bezier(.22,.9,.25,1);
+  will-change: transform;
+}
+
+/* cada slide ocupa 100% del ancho */
+.slide {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 20px;
+  box-sizing: border-box;
+  background: #000;
+}
+
+/* imagen dentro de slide: se ve completa, centrada y con límite de altura */
+.slide img {
+  display: block;
+  width: auto;            /* evita estirar horizontalmente */
+  max-width: 100%;
+  max-height: 60vh;      /* se adapta a la ventana (ajusta si necesario) */
+  object-fit: contain;   /* muestra imagen completa sin recortes */
+  background: #000;
+  border-radius: 6px;
+}
+
+/* controles (prev/next) */
+.control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 40;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,214,0,0.95);
+  display: grid;
+  place-items: center;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+.control.prev { left: 14px; }
+.control.next { right: 14px; }
+
+/* indicadores (dots) */
+.indicators {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 45;
+}
+.indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.5);
+  cursor: pointer;
+}
+.indicators button.active {
+  background: #26a69a;
+  box-shadow: 0 4px 10px rgba(38,166,154,0.25);
+}
+
+/* hover/focus accessibility */
+.control:focus, .indicators button:focus { outline: 2px solid rgba(255,214,0,0.9); outline-offset: 2px; }
+
+/* YOUTUBE */
+.youtube {
+  text-align: center;
+  padding: 50px 20px;
+  background: #f5f5f5;
+  position: relative;
+}
+
+.youtube::before {
+  content: "";
+  display: block;
+  width: 60%;          /* 🔹 controla qué tanto se extiende la línea */
+  margin: 0 auto 30px; /* centrada con espacio abajo */
+  border-top: 4px solid #bbb; /* grosor y color */
+  border-radius: 2px;  /* opcional, esquinas suaves */
+}
+
+
+.youtube h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.youtube h2 .yt-logo {
+  height: 40px;     /* ajusta según tu logo */
+  width: auto;
+  display: inline-block;
+}
+
+.yt-card {
+  position: relative;
+  display: inline-block;
+}
+
+.yt-thumb {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  display: block;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 64px;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 4px 8px rgba(0,0,0,0.6);
+  pointer-events: none; /* 🔹 permite hacer clic en el link, no en el botón */
+}
+
+.yt-link {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+}
+
+
+
+/* FOOTER */
+.footer { display: flex; justify-content: space-between; align-items: center; background: #000; color: #fff; padding: 30px 40px; }
+.footer ul { list-style: none; margin-top: 10px; }
+.footer ul li { margin-bottom: 5px; }
+.footer-img img { width: 120px; }
+
+/* Responsive tweaks */
+@media (max-width: 700px) {
+  .control { width: 40px; height: 40px; font-size: 18px; }
+  .slide img { max-height: 50vh; }
+  .my-carousel { margin: 20px; border-radius: 10px; }
+}
+
+/* Ya sabes que estas separando santiago*/
+/* REDES SOCIALES */
+.social-section {
+  display: flex;
+  justify-content: center;   /* 🔹 en lugar de separarlos a los extremos */
+  align-items: center;
+  background: #000;          /* fondo negro */
+  color: #fff;
+  padding: 60px 40px;
+  gap: 200px;                 /* 🔹 controla la distancia entre texto e imagen */
+}
+
+
+.social-text ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-text ul li {
+  margin-bottom: 6px;
+}
+
+.social-text ul li a {
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.social-text ul li a:hover {
+  color: #bbb; /* gris suave al pasar */
+}
+
+.social-img img {
+  max-width: 260px;   /* ajusta según tamaño */
+  height: auto;
+}
+
+
+/* Responsive */
+@media (max-width: 800px) {
+  .social-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .social-img {
+    margin-top: 30px;
+  }
+}

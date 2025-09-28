@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Catalejo</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/script.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <div class="brand">
+      <img src="img/inicio_1.png" alt="Catalejo" class="brand-logo">
+    </div>
+    <button class="menu-toggle" aria-label="Menú">
+      ☰
+    </button>
+
+    <nav class="nav-pills" aria-label="Principal">
+      <a class="pill quienes" href="quienes.html">Quienes somos</a>
+      <a class="pill blog" href="blog.html">Blog</a>
+      <a class="pill adap" href="adaptaciones.html">Adaptaciones</a>
+      <a class="pill pod" href="podcast.html">Podcast</a>
+    </nav>
+
+    <div class="socials" aria-hidden="true">
+      <a class="soc" href="https://www.youtube.com/@Catalejo_med" title="YouTube"><i class="fab fa-youtube"></i></a>
+      <a class="soc" href="https://www.instagram.com/catalejo.med/" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a class="soc" href="https://www.facebook.com/share/1BPFPQ7bNR/" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a class="soc" href="https://www.tiktok.com/@catalejo.med" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+    </div>
+  </div>
+</header>
+
+  <section class="my-carousel" aria-label="Galería principal">
+    <div class="carousel-viewport" id="heroCarousel">
+
+      <div class="slides">
+        <div class="slide">
+          <img src="img/1.png" alt="Imagen 1">
+        </div>
+        <div class="slide">
+          <img src="img/2.png" alt="Imagen 2">
+        </div>
+        <div class="slide">
+          <img src="img/3.png" alt="Imagen 3">
+        </div>
+      </div>
+
+      <!-- controles -->
+      <button class="control prev" aria-label="Anterior">❮</button>
+      <button class="control next" aria-label="Siguiente">❯</button>
+
+      <!-- indicadores (se generan desde JS) -->
+      <div class="indicators" role="tablist" aria-label="Indicadores carrusel"></div>
+    </div>
+  </section>
+
+<!-- YOUTUBE -->
+<section class="youtube">
+  <h2>
+    <img src="img/inicio.png" alt="Logo Catalejo" class="yt-logo">
+    Visita nuestro canal de YouTube
+  </h2>
+  <div class="yt-card">
+    <a href="https://youtu.be/6Ux8UqT9m-E?si=lTsMV40bIonJCxQV" target="_blank" class="yt-link">
+      <img src="img/musica.png" alt="¡Que viva la música!" class="yt-thumb">
+      <span class="play-button">&#9658;</span>
+    </a>
+  </div>
+</section>
+
+<footer>
+<!-- REDES SOCIALES -->
+<section class="social-section">
+  <div class="social-text">
+    <ul>
+      <li><a href="https://www.youtube.com/@Catalejo_med" target="_blank">YOUTUBE</a></li>
+      <li><a href="https://www.instagram.com/catalejo.med/" target="_blank">INSTAGRAM</a></li>
+      <li><a href="https://www.tiktok.com/@catalejo.med" target="_blank">TIKTOK</a></li>
+      <li><a href="https://www.facebook.com/share/1BPFPQ7bNR/" target="_blank">FACEBOOK</a></li>
+    </ul>
+  </div>
+  <div class="social-img">
+    <img src="img/footer.png" alt="Mascota pirata">
+  </div>
+</section>
+</footer>
+<script>
+  document.querySelector('.menu-toggle').addEventListener('click', () => {
+    document.querySelector('.nav-pills').classList.toggle('active');
+  });
+</script>
+
+</body>
+</html>
