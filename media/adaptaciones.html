@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Catalejo - Video</title>
+  <link rel="stylesheet" href="css/quienes.css">
+  <link rel="icon" type="image/png" href="img/favicon.png" sizes="32x32">
+
+  <style>
+    /* Centrado y estilo general para videos e imágenes */
+    .video-container {
+      display: flex;
+      justify-content: center;
+      margin: 30px 0;
+    }
+
+    .video-container iframe,
+    .video-container img,
+    .video-container video {
+      width: 100%;
+      max-width: 800px;
+      border-radius: 12px;
+    }
+
+    /* Imagen estilo reproductor */
+    .video-container img {
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .video-container img:hover {
+      transform: scale(1.02);
+    }
+
+    /* Video con sombra */
+    .video-container video {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand">
+        <a href="index.html">
+          <img src="img/inicio_1.png" alt="Catalejo" class="brand-logo">
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Título -->
+  <section class="blog-section">
+    <h2 class="blog-heading">
+      <a href="adaptaciones.html">
+        <img src="img/adaptaciones.png" alt="Ícono Video">
+      </a>
+    </h2>
+  </section>
+
+  <!-- Video existente (YouTube miniatura enlazada) -->
+  <section class="contenido-blog">
+    <div class="video-container">
+      <a href="https://youtu.be/502-LVAnV_0" target="_blank">
+        <img src="img/Adaptaciones-video.png" alt="Reproductor Catalejo">
+      </a>
+    </div>
+  </section>
+
+  <!-- Nuevo video local -->
+  <section class="contenido-blog">
+    <div class="video-container">
+      <video controls>
+        <source src="media/Animacion_2d.mp4" type="video/mp4">
+        Tu navegador no soporta el video HTML5.
+      </video>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="mini-footer">
+    <div class="enlaces-footer">
+      <a href="index.html" class="btn-footer naranja">Inicio</a>
+      <a href="quienes.html" class="btn-footer azul">Quiénes somos</a>
+      <a href="blog.html" class="btn-footer verde">Blog</a>
+      <a href="podcast.html" class="btn-footer amarillo">Podcast</a>
+      <a href="adaptaciones.html" class="btn-footer morado">Adaptaciones</a>
+    </div>
+  </footer>
+
+</body>
+</html>
