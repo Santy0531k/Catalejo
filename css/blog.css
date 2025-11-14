@@ -49,43 +49,41 @@
       font-size: 1.2rem;
     }
 
-    /* Footer reducido */
-    .mini-footer {
-      text-align: center;
-      padding: 15px;
-      background: #ffffff;
-      border-top: 1px solid #f0f0f0;
-      margin-top: 40px;
-    }
+/* Footer */
+.mini-footer {
+  text-align: center;
+  padding: 15px;
+  background: #ffffff;
+  border-top: 1px solid #f0f0f0;
+  margin-top: 40px;
+}
+.enlaces-footer {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.btn-footer {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 20px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  transition: transform 0.2s, background 0.2s;
+}
+.btn-footer:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+.btn-footer.naranja { background: #ff7b54; color: #fff; }
+.btn-footer.azul { background: #42a5f5; }
+.btn-footer.verde { background: #66bb6a; }
+.btn-footer.morado { background: #8e24aa; }
+.btn-footer.amarillo { background: #fbc02d;}
+.btn-footer.rosa { background: #ff4fa3;}
 
-    .enlaces-footer {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .btn-footer {
-      display: inline-block;
-      padding: 8px 14px;
-      border-radius: 20px;
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
-      transition: transform 0.2s, background 0.2s;
-    }
-
-    .btn-footer:hover {
-      transform: scale(1.05);
-      opacity: 0.9;
-    }
-
-    .btn-footer.azul { background: #42a5f5; }
-    .btn-footer.verde { background: #66bb6a; }
-    .btn-footer.morado { background: #8e24aa; }
-    .btn-footer.amarillo { background: #fbc02d; color: #000; }
-    .btn-footer.naranja { background: #ff7b54; color: #fff; }
 
     /* HEADER */
 /* --- Header estilo Catalejo --- */
