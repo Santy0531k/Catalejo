@@ -36,13 +36,16 @@ body {
 
 /* Imágenes con texto alrededor */
 .img-left {
-  float: left;
-  width: 260px;
-  margin: 0 20px 10px 0;
-  border-radius: 8px;
-  shape-outside: inset(0 round 8px);
-  -webkit-shape-outside: inset(0 round 8px);
+  float: none !important;
+  width: 100%;
+  max-width: 320px;
+  display: block;
+  margin: 25px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  shape-outside: none !important;
 }
+
 
 .img-right {
   float: right;
@@ -92,5 +95,7 @@ body {
 .btn-footer.azul { background: #42a5f5; }
 .btn-footer.verde { background: #66bb6a; }
 .btn-footer.morado { background: #8e24aa; }
-.btn-footer.amarillo { background: #fbc02d; color: #000; }
+.btn-footer.amarillo { background: #fbc02d;}
+.btn-footer.rosa { background: #ff4fa3;}
+
 
