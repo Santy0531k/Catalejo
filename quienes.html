@@ -8,33 +8,69 @@
   <link rel="icon" type="image/png" href="img/favicon.png" sizes="32x32">
 
   <style>
+/* ---------- ESTILO DEL VIDEO ---------- */
 .video-vertical {
   aspect-ratio: 9 / 16;
   width: 100%;
-  max-width: 260px; /* antes 420px */
+  max-width: 260px;
   border-radius: 12px;
   object-fit: cover;
   box-shadow: 0 4px 12px rgba(0,0,0,0.25);
   display: block;
 }
 
-    /* Hace que el video se comporte como la imagen que estaba a la derecha */
-    .video-right {
-      float: right;
-      margin-left: 20px; 
-      margin-bottom: 10px;
-    }
+.video-right {
+  float: right;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
 
-    /* En pantallas grandes un poco más de tamaño */
 @media(min-width: 1024px){
   .video-vertical {
-    max-width: 320px; /* antes 500px */
+    max-width: 320px;
+  }
+}
+
+/* ---------- CONTENEDOR TIPO TARJETA ---------- */
+.card-container {
+  background: white;
+  border-radius: 20px;
+  padding: 35px;
+  max-width: 900px;
+  margin: 40px auto;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.card-container p {
+  margin-bottom: 25px;
+}
+
+/* Imagen izquierda */
+.img-left {
+  float: left;
+  width: 260px;
+  margin-right: 20px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .img-left, .video-right {
+    float: none;
+    display: block;
+    margin: 0 auto 20px auto;
   }
 }
   </style>
 </head>
 
 <body>
+
   <!-- Header -->
   <header class="site-header">
     <div class="wrap">
@@ -55,37 +91,37 @@
     </h2>
   </section>
 
-  <!-- Contenido -->
-  <section class="contenido-blog">
+  <!-- CONTENIDO EN TARJETA -->
+  <section class="card-container">
 
-    <!-- ✅ Aquí sustituimos la imagen por el video -->
+    <!-- Párrafo con el video a la derecha -->
     <p>
-<video class="video-right video-vertical" autoplay muted loop playsinline>
-  <source src="media/Animacion_3d.mp4" type="video/mp4">
-  Tu navegador no soporta el video HTML5.
-</video>
+      <video class="video-right video-vertical" autoplay muted loop playsinline>
+        <source src="media/Animacion_3d.mp4" type="video/mp4">
+        Tu navegador no soporta el video HTML5.
+      </video>
 
       Catalejo es una marca digital interactiva que transforma la literatura colombiana en una experiencia de juego, creación y comunidad especialmente diseñada para adolescentes. Nuestro propósito es despertar la imaginación, la creatividad y el pensamiento crítico a través de relatos transmedia, juegos narrativos y actividades participativas que invitan a explorar y reimaginar las historias nacionales desde formatos digitales innovadores.
     </p>
 
-    <br><br><br>
-
+    <!-- Párrafo con imagen a la izquierda -->
     <p>
-      <img src="img/quienes.png" alt="Imagen izquierda" class="img-left">
       Catalejo nace para que la literatura deje de ser una tarea para convertirse en un ritual, una aventura donde cada usuario pueda jugar, crear y ser parte de una comunidad que valora la diversidad y potencia el pensamiento narrativo. Esta es una invitación abierta a mirar el mundo con otros ojos y hacer de la lectura una experiencia inolvidable.
+    <img src="img/quienes.png" alt="Imagen izquierda" class="img-left">
     </p>
 
   </section>
 
-  <!-- Footer -->
   <footer class="mini-footer">
     <div class="enlaces-footer">
-      <a href="index.html" class="btn-footer naranja">Inicio</a>
+      <a href="index.html" class="btn-footer naranja" >Inicio</a>
       <a href="quienes.html" class="btn-footer azul">Quiénes somos</a>
       <a href="blog.html" class="btn-footer verde">Blog</a>
       <a href="podcast.html" class="btn-footer amarillo">Podcast</a>
       <a href="adaptaciones.html" class="btn-footer morado">Adaptaciones</a>
+      <a href="contacto.html" class="btn-footer rosa">Contáctanos</a>
     </div>
   </footer>
+
 </body>
 </html>
