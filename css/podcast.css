@@ -75,11 +75,13 @@ body {
   transform: scale(1.05);
   opacity: 0.9;
 }
+.btn-footer.naranja { background: #ff7b54; color: #fff; }
 .btn-footer.azul { background: #42a5f5; }
 .btn-footer.verde { background: #66bb6a; }
 .btn-footer.morado { background: #8e24aa; }
-.btn-footer.amarillo { background: #fbc02d; color: #000; }
-.btn-footer.naranja { background: #ff7b54; color: #fff; }
+.btn-footer.amarillo { background: #fbc02d;}
+.btn-footer.rosa { background: #ff4fa3;}
+
 
 /* Contenedor dinámico */
 .coming-soon-dynamic {
