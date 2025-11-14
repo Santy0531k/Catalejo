@@ -35,6 +35,7 @@ body { font-family: Arial, sans-serif; background: #fff; color: #222; }
 .pill.adap    { background: #7b4cc9; }
 .pill.pod     { background: #f1c02f; color:#222; }
 .pill.inicio  { background: #ff7b54; color: #fff; }
+.pill.contacto  { background: #ff4fa3; color: #fff; }
 
 /* socials */
 .socials { display:flex; gap:10px; margin-left: 12px; }
@@ -93,13 +94,13 @@ body { font-family: Arial, sans-serif; background: #fff; color: #222; }
 }
 
 /* ========================= */
-/* CAROUSEL (FULL WIDTH MODERADO) */
+/* CAROUSEL */
 /* ========================= */
 
 .my-carousel {
   width: 100%;
   max-width: 100%;
-  margin: 0;              /* pegado a los bordes */
+  margin: 0;
   border-radius: 0;
   overflow: hidden;
   position: relative;
@@ -132,7 +133,7 @@ body { font-family: Arial, sans-serif; background: #fff; color: #222; }
 /* imagen dentro del slide */
 .slide img {
   width: 100%;
-  height: 55vh;           /* ⭐ altura moderada */
+  height: 75vh;              /* ⭐ 65% de la pantalla en desktop */
   object-fit: cover;
   object-position: center;
   display: block;
@@ -155,7 +156,6 @@ body { font-family: Arial, sans-serif; background: #fff; color: #222; }
   cursor: pointer;
   box-shadow: 0 4px 14px rgba(0,0,0,0.25);
 }
-
 .control.prev { left: 14px; }
 .control.next { right: 14px; }
 
@@ -177,21 +177,29 @@ body { font-family: Arial, sans-serif; background: #fff; color: #222; }
   background: rgba(255,255,255,0.6);
   cursor: pointer;
 }
-
 .indicators button.active {
   background: #ffd600;
 }
 
-/* móvil */
+/* móvil – optimizado para imágenes horizontales */
 @media (max-width: 700px) {
   .slide img {
-    height: 45vh;   /* un poco más compacto en celular */
+    height: 29vh;                 /* ⭐ evita recortes fuertes */
+    object-position: top center;  /* ⭐ muestra lo importante */
+  }
+
+  .control {
+    width: 38px;
+    height: 38px;
+    font-size: 18px;
   }
 }
 
-
 /* hover/focus accessibility */
-.control:focus, .indicators button:focus { outline: 2px solid rgba(255,214,0,0.9); outline-offset: 2px; }
+.control:focus, .indicators button:focus {
+  outline: 2px solid rgba(255,214,0,0.9);
+  outline-offset: 2px;
+}
 
 /* YOUTUBE */
 .youtube {
@@ -204,12 +212,11 @@ body { font-family: Arial, sans-serif; background: #fff; color: #222; }
 .youtube::before {
   content: "";
   display: block;
-  width: 60%;          /* 🔹 controla qué tanto se extiende la línea */
-  margin: 0 auto 30px; /* centrada con espacio abajo */
-  border-top: 4px solid #bbb; /* grosor y color */
-  border-radius: 2px;  /* opcional, esquinas suaves */
+  width: 60%;
+  margin: 0 auto 30px;
+  border-top: 4px solid #bbb;
+  border-radius: 2px;
 }
-
 
 .youtube h2 {
   font-size: 26px;
@@ -221,15 +228,12 @@ body { font-family: Arial, sans-serif; background: #fff; color: #222; }
 }
 
 .youtube h2 .yt-logo {
-  height: 40px;     /* ajusta según tu logo */
+  height: 40px;
   width: auto;
   display: inline-block;
 }
 
-.yt-card {
-  position: relative;
-  display: inline-block;
-}
+.yt-card { position: relative; display: inline-block; }
 
 .yt-thumb {
   width: 100%;
@@ -247,7 +251,7 @@ body { font-family: Arial, sans-serif; background: #fff; color: #222; }
   font-size: 64px;
   color: rgba(255, 255, 255, 0.9);
   text-shadow: 0 4px 8px rgba(0,0,0,0.6);
-  pointer-events: none; /* 🔹 permite hacer clic en el link, no en el botón */
+  pointer-events: none;
 }
 
 .yt-link {
@@ -256,43 +260,32 @@ body { font-family: Arial, sans-serif; background: #fff; color: #222; }
   text-decoration: none;
 }
 
-
-
 /* FOOTER */
 .footer { display: flex; justify-content: space-between; align-items: center; background: #000; color: #fff; padding: 30px 40px; }
 .footer ul { list-style: none; margin-top: 10px; }
 .footer ul li { margin-bottom: 5px; }
 .footer-img img { width: 120px; }
 
-/* Responsive tweaks */
 @media (max-width: 700px) {
   .control { width: 40px; height: 40px; font-size: 18px; }
   .slide img { max-height: 50vh; }
   .my-carousel { margin: 20px; border-radius: 10px; }
 }
 
-/* Ya sabes que estas separando santiago*/
 /* REDES SOCIALES */
 .social-section {
   display: flex;
-  justify-content: center;   /* 🔹 en lugar de separarlos a los extremos */
+  justify-content: center;
   align-items: center;
-  background: #000;          /* fondo negro */
+  background: #000;
   color: #fff;
   padding: 60px 40px;
-  gap: 200px;                 /* 🔹 controla la distancia entre texto e imagen */
+  gap: 200px;
 }
 
+.social-text ul { list-style: none; padding: 0; margin: 0; }
 
-.social-text ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.social-text ul li {
-  margin-bottom: 6px;
-}
+.social-text ul li { margin-bottom: 6px; }
 
 .social-text ul li a {
   color: #fff;
@@ -302,25 +295,19 @@ body { font-family: Arial, sans-serif; background: #fff; color: #222; }
   transition: color 0.2s ease;
 }
 
-.social-text ul li a:hover {
-  color: #bbb; /* gris suave al pasar */
-}
+.social-text ul li a:hover { color: #bbb; }
 
 .social-img img {
-  max-width: 260px;   /* ajusta según tamaño */
+  max-width: 260px;
   height: auto;
 }
 
-
-/* Responsive */
 @media (max-width: 800px) {
   .social-section {
     flex-direction: column;
     text-align: center;
   }
-  .social-img {
-    margin-top: 30px;
-  }
+  .social-img { margin-top: 30px; }
 }
 
 /* FOOTER MINI */
@@ -344,5 +331,5 @@ body { font-family: Arial, sans-serif; background: #fff; color: #222; }
 }
 
 .mini-socials a:hover {
-  color: #ffd600; /* amarillo catalejo */
+  color: #ffd600;
 }
